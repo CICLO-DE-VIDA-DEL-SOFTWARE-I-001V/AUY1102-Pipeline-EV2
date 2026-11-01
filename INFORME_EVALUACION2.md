@@ -141,6 +141,17 @@ Rafael Heneche evaluó técnica y operativamente el ecosistema de herramientas i
    ```
 3. **Métricas Obtenidas:** SonarCloud identificó los *Code Smells* situados en `src/quality/`, catalogando problemas de mantenibilidad y tipado dinámico inseguro (`any`).
 
+**Importación Repositorio SonarQube**
+<img width="921" height="481" alt="image" src="https://github.com/user-attachments/assets/c12e4780-9f4a-4a10-9358-bf4676f1cfb8" />
+
+**Análisis Vulnerabilidaes SonarQube**
+<img width="921" height="440" alt="image" src="https://github.com/user-attachments/assets/e61ef179-28a7-47ec-aa06-8904da345360" />
+<img width="921" height="483" alt="image" src="https://github.com/user-attachments/assets/91c0b975-c283-4368-b7aa-c15f7979deb1" />
+<img width="921" height="457" alt="image" src="https://github.com/user-attachments/assets/0da90c1f-6be8-40d6-9406-800e40b23163" />
+<img width="921" height="474" alt="image" src="https://github.com/user-attachments/assets/c875a99a-8806-41d6-adcb-b85337e46f18" />
+
+
+
 ---
 
 ### 3.3 Conexión y Ejecución de Snyk
@@ -155,6 +166,14 @@ Rafael Heneche evaluó técnica y operativamente el ecosistema de herramientas i
      npx snyk test
      ```
    * *Resultado:* Snyk auditó el grafo de dependencias, reportando vulnerabilidades conocidas con sus correspondientes identificadores CVE y recomendaciones de actualización de versión mínima no vulnerable.
+<img width="921" height="262" alt="image" src="https://github.com/user-attachments/assets/53e0ded3-0f6e-4558-ac08-aac42c42a680" />
+  
+
+**Importación Repositorio Snyk**
+<img width="921" height="229" alt="image" src="https://github.com/user-attachments/assets/d79077d2-d0b3-4b30-abfc-5262fa49f385" />
+
+**Análisis Vulnerabilidaes Snyk**
+<img width="921" height="312" alt="image" src="https://github.com/user-attachments/assets/4dc4dd84-f8bd-4356-97c5-a9ede892e850" />
 
 ---
 
@@ -164,13 +183,30 @@ Rafael Heneche evaluó técnica y operativamente el ecosistema de herramientas i
    npm audit
    ```
    *Diagnóstico:* Se identificaron vulnerabilidades en dependencias transitivas asociadas a librerías de prueba y utilitarios de desarrollo.
-2. **Remediación Automatizada:**
+<img width="921" height="475" alt="image" src="https://github.com/user-attachments/assets/982ba9cf-9c18-4f98-966e-357a611a0a74" />
+
+   
+3. **Remediación Automatizada:**
    ```bash
    npm audit fix
    ```
    *Efecto de la remediación:* npm actualizó las dependencias en `package-lock.json` a las versiones semánticas que resuelven los reportes de seguridad sin generar incompatibilidades de API.
-3. **Remediación en Código Fuente (`src/quality/`):**
+<img width="921" height="513" alt="image" src="https://github.com/user-attachments/assets/21802006-2d55-4db8-b362-55c2fde3064b" />
+
+**Resultado**
+<img width="921" height="482" alt="image" src="https://github.com/user-attachments/assets/9b76b33b-79a5-4bc8-8717-f472acb7e58e" />
+
+
+5. **Remediación en Código Fuente (`src/quality/`):**
    * Se intervinieron las malas prácticas señaladas por el análisis estático en `src/quality/insecure-1-object.ts` y `errores-object.ts`, sustituyendo declaraciones inseguras de variables (`var`) por tipado inmutable (`const`/`let`) y saneando declaraciones para cumplir con el estándar TypeScript estricto.
+
+<img width="921" height="385" alt="image" src="https://github.com/user-attachments/assets/981ca412-e57d-426a-841b-8d5afaf834c7" />
+<img width="921" height="465" alt="image" src="https://github.com/user-attachments/assets/5c02aa80-070e-4d1f-9fc1-71df4379fd75" />
+
+**Evidencia Remediación en Github**
+<img width="921" height="537" alt="image" src="https://github.com/user-attachments/assets/10663635-928c-4787-8f06-accf248327e4" />
+<img width="921" height="463" alt="image" src="https://github.com/user-attachments/assets/6c14063f-9d44-4b7a-885c-6b4559806093" />
+
 
 ---
 
@@ -180,6 +216,9 @@ En el repositorio Fork (Ruta: *Settings* $\rightarrow$ *Code security and analys
 * [x] **Dependabot alerts:** Sistema de notificación proactivo ante nuevas vulnerabilidades públicas en el catálogo de paquetes.
 * [x] **Dependabot security updates:** Automatización que genera Pull Requests con la solución exacta apenas se descubre un parche de seguridad.
 * [x] **Secret scanning:** Inspección continua en cada `git push` para bloquear e invalidar cadenas de conexión, API Keys o certificados comprometidos.
+      
+<img width="921" height="475" alt="image" src="https://github.com/user-attachments/assets/14bb7227-8b42-41ef-b3f0-243dcd4d956b" />
+<img width="921" height="470" alt="image" src="https://github.com/user-attachments/assets/f4f66074-9a2a-4fd4-87f2-4c4117346d3f" />
 
 ---
 
