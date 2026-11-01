@@ -132,8 +132,8 @@ Rafael Heneche evaluó técnica y operativamente el ecosistema de herramientas i
 1. **Vinculación Web:** Se integró la cuenta de GitHub con la plataforma SonarCloud, importando el repositorio Fork `AUY1102-Pipeline-EV2`.
 2. **Configuración en el Repositorio:** Se definió en la raíz el archivo `sonar-project.properties`:
    ```properties
-   sonar.projectKey=<ORGANIZACION>_AUY1102-Pipeline-EV2
-   sonar.organization=<ORGANIZACION>
+   sonar.projectKey=ciclo-de-vida-del-software-i-001v-1
+   sonar.organization=2026_2_AV_AUY1102-Grupo-1
    sonar.sources=src
    sonar.tests=test
    sonar.javascript.lcov.reportPaths=coverage/lcov.info
