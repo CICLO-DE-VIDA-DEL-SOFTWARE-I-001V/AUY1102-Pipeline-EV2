@@ -90,6 +90,8 @@ Time:        6.438 s
 | `src/value-object/primitives/number-value-object.ts` | 100.00% | 100.00% | 100.00% | 100.00% | *Ninguna (100%)* |
 | `src/value-object/primitives/string-value-object.ts` | 100.00% | 100.00% | 100.00% | 100.00% | *Ninguna (100%)* |
 
+<img width="654" height="455" alt="Captura de pantalla 2026-11-01 080349" src="https://github.com/user-attachments/assets/a7c71bbc-970b-43a5-a198-9aaacfe54821" />
+
 ### 2.5 Diagnóstico de Cobertura y Código Huérfano
 1. **Módulo Crítico `src/quality/` (0% Cobertura):** Los archivos `errores-object.ts`, `insecure-1-object.ts` e `insecure-2-object.ts` carecen de archivos de prueba en `test/`. Contienen deliberadamente debilidades de código y patrones inseguros que constituyen el foco de análisis de la Parte 2.
 2. **Módulo de Primitivas (`date-value-object.ts`):** Las líneas 3 a 35 no son alcanzadas por la suite de pruebas actual, dejando sin verificar métodos de parseo de fechas y manejo de formatos incorrectos.
